@@ -10,13 +10,10 @@ def prompt_number(msg):
     a = int(input(msg))
     return a
 
-def summaryize_numbers(number1, number2, summaryze = 0):
-    if number1 == 0 and number2 == 0:
-        return summaryze
-    if number1 == 0 and number2 > 0:
-        return summaryize_numbers(number1, number2-1, summaryze +1)
-    if number1 > 0 and number2 > 0:
-        return summaryize_numbers(number1-1, number2, summaryze +1)
+def summaryize_numbers(number1, number2):
+    if number1 == 0:
+        return number2
+    return summaryize_numbers(number1-1, number2 +1)
 
 number_a = prompt_number("Введите первое число: ")
 number_b = prompt_number("Введите второе число: ")
