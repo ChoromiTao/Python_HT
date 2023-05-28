@@ -10,22 +10,18 @@
 # **Ввод:** пара-ра-рам рам-пам-папам па-ра-па-да    
 #     **Вывод:** Парам пам-пам  
 
-dict_vowels = {1: "а" "е" "ё" "и" "о" "у" "ы" "э" "ю" "я", 2: "-"}
-dict_delimiter = {"stop": " "}
-sum_vowels, count = list(), 0
+vovels = 'аеёиоуыэюя' # список гласных букв
 
-def prompt(msg):
-    return poetry:= list(input(msg)) 
+poem =((input('введите стих: ')).split()) # список фраз стиха
+countVovels = set() # множество для проверки различия количества гласных во фразах
+print(poem)
+for frase in poem:
+    glas = list(filter(lambda x: x in vovels, frase)) # cписок с гласными из фразы
+    #print(len(glas))
+    countVovels.add(len(glas)) #добавление количества гласных во фразе
 
-def reading(poetry, poetry_new: list()):
-    poetry_new = [letter for letter in poetry if letter in dict_vowels.values()]
-    for letter in poetry:
-        if letter in dict_delimiter.values(" "):
-            count +=1
-    while j < count:
-        sub_poetry = list()
-        if letter in poetry_new in dict_vowels.values() and not dict_delimiter.values():
-            sub_poetry.append(letter)
-            #if #короче допилить стоп на пробел и очистку подсторчки. И куда сохранять результат???
-
+if len(countVovels) == 1: # если количество гласных во всех фразах совпадает
+    print('Парам пам-пам')
+else:
+    print('Пам парам')     
 
